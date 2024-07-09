@@ -55,7 +55,7 @@ class LibraryManagementSystem:
 
         self.update_table()
 
-        master.bind("", self.resize_table)
+        master.bind("<Configure>", self.resize_table)
 
     def resize_table(self, event):
         table_width = event.width - 200  # Adjust for other widgets
